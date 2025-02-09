@@ -6,4 +6,6 @@ b = difference()(
     sphere(15),
 )
 
-scad_render_to_file(b, 'stand.scad')
+if __name__ == '__main__':
+    file_out = scad_render_to_file(b, 'out/stand.scad', include_orig_code=True)
+    print(f"{__file__}: SCAD file written to: \n{file_out}")
